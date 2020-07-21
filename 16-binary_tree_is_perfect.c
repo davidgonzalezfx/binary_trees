@@ -1,5 +1,10 @@
 #include "binary_trees.h"
-
+/**
+ * power - calculates the power exponent of the base
+ * @base: base of the power
+ * @exponent: exponent of the power
+ * Return: The power
+ */
 int power(int base, int exponent)
 {
 	int result = 1;
@@ -52,13 +57,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t tree_height, tree_size, perfect_size;
 
-	if(!tree)
-		return 0;
+	if (!tree)
+		return (0);
 
 	tree_height = binary_tree_height(tree);
 	tree_size = binary_tree_size(tree);
 	perfect_size = (power(2, tree_height + 1)) - 1;
 	if (tree_size == perfect_size)
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
